@@ -54,13 +54,13 @@ body {
 }
 
 .noah-link {
-  color: rgba(222, 248, 126, 0.82);
+  color: rgba(245, 246, 42, 0.82);
   background-color: transparent;
   text-decoration: none;
 }
 
 .noah-link:visited {
-  color: rgba(247, 126, 143, 0.93);
+  color: rgba(245, 246, 42, 0.82);
   background-color: transparent;
   text-decoration: none;
 }

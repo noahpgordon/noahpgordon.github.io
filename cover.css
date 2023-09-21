@@ -59,20 +59,20 @@ body {
   text-decoration: none;
 }
 
-a:visited {
-  color: pink;
+.noah-link:visited {
+  color: rgba(247, 126, 143, 0.93);
   background-color: transparent;
   text-decoration: none;
 }
 
-a:hover {
-  color: red;
+.noah-link:hover {
+  color: rgba(235, 32, 59, 0.9);
   background-color: transparent;
   text-decoration: underline;
 }
 
-a:active {
-  color: yellow;
+.noah-link:active {
+  color: rgba(235, 32, 59, 0.9);
   background-color: transparent;
   text-decoration: underline;
 }

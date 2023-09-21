@@ -53,7 +53,7 @@ body {
   border-bottom-color: #fff;
 }
 
-a:link {
+.noah-link {
   color: rgba(222, 248, 126, 0.82);
   background-color: transparent;
   text-decoration: none;

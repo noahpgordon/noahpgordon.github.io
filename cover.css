@@ -76,3 +76,7 @@ body {
   background-color: transparent;
   text-decoration: underline;
 }
+
+p.indented {
+  margin-left: 25px;
+}

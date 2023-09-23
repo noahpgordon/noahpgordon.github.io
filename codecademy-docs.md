@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Noah Gordon">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Codecademy Docs Contributions</title>
+    <link rel="canonical" href="https://noahpgordon.github.io/writings.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  <body class="h-100 text-white">
+    <div class="container-fluid text-center h-25">
+      <header class="mb-auto">
+        <div>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Writings</a>
+            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="#">Resume</a>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <div class="container-fluid h-75">
+      <div class="row"><div class="col-10 offset-1">
+        <h2><u>Pages I created</u></h2>
+          <ul>
+            <li>Luau</li>
+              <ol>
+              <li><a class="noah-link" href="#">Conditionals</a></li>
+              <li><a class="noah-link" href="#">Operators</a></li>
+              </ol>
+            <li>PHP</li>
+              <ol>
+                <li><a class="noah-link" href="#">String function <code>ord()</code></a></li>
+              </ol>
+            <li>Python</li>
+              <ol>
+                <li><a class="noah-link" href="#">String function <code>isdecimal()</code></a></li>
+              </ol>
+            <li>Discrete Math</li>
+              <ol>
+                <li><a class="noah-link" href="#">Conditional Proof</a></li>
+                <li><a class="noah-link" href="#">Proof by Cases</a></li>
+                <li><a class="noah-link" href="#">Proof by Contradiction</a></li>
+              </ol>
+          </ul>
+        <h2><u>Pages I substantially rewrote</u></h2>
+          <ul>
+            <li>Discrete Math</li>
+              <ol>
+                <li><a class="noah-link" href="#">Proofs</a></li>
+                <li><a class="noah-link" href="#">Proof by Strong Induction</a></li>
+              </ol>
+          </ul>
+        <blockquote>
+          <p><strong>Note:</strong>Codecademy Docs is an open-source project and the pages above may be edited by others after me. I am happy to provide my original markdown files on request.</p>
+        </blockquote>
+      </div></div>
+    </div>
+  </body>
+</html>

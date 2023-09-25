@@ -113,7 +113,7 @@
 		    			$('#video').append('<iframe width="420" height="315" src="https://www.youtube.com/embed/' + movieResponse.videos.results[0] + '"></iframe>');
 		    		}
 		    		$.ajax({
-		    			url: 'https://www.omdbapi.com/apikey=c3173f05&',
+		    			url: 'https://www.omdbapi.com/?apikey=c3173f05&',
 		    			type: "GET",
 		    			dataType: "JSON",
 		    			data: {

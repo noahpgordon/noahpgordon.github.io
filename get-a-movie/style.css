@@ -1,0 +1,37 @@
+﻿body{
+	background-color:#eefcb6;
+}
+#title{
+	font-size:x-large;
+}
+#releases1{
+	color: red;
+}
+#releases2{
+	color: red;
+}
+#runtimes1{
+	color:red;
+}
+#runtimes2{
+	color:red;
+}
+#content{
+	margin-top:30px;
+}
+h5{
+	font-size:large;
+	font-style:italic;
+	color:blue;
+}
+#reviewHeadline{
+	font-weight:bold;
+	margin-bottom:5px;
+}
+#reviewSummary{
+	margin-bottom:5px;
+}
+h1{
+	text-align:center;
+	color: #4114b3;
+}

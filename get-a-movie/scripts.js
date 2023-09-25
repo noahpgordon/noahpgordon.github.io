@@ -110,7 +110,7 @@
 		    	success: function(movieResponse){
 		    		var imdbID = movieResponse.imdb_id ;
 		    		if(movieResponse.videos.results.length > 0){
-		    			$('#video').append('<iframe width="420" height="315" src="https://www.youtube.com/embed/' + movieResponse.videos.results[0].key + '"></iframe>');
+		    			$('#video').append('<iframe width="420" height="315" src="https://www.youtube.com/embed/' + movieResponse.videos.results[0] + '"></iframe>');
 		    		}
 		    		$.ajax({
 		    			url: 'https://www.omdbapi.com/',

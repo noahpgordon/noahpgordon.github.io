@@ -113,7 +113,7 @@
 		    			$('#video').append('<iframe width="420" height="315" src="https://www.youtube.com/embed/' + movieResponse.videos.results[0].key + '"></iframe>');
 		    		}
 		    		$.ajax({
-		    			url: 'http://www.omdbapi.com/',
+		    			url: 'https://www.omdbapi.com/',
 		    			type: "GET",
 		    			dataType: "JSON",
 		    			data: {

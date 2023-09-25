@@ -20,7 +20,6 @@
 		$('#finalMPAA').empty();
 		$('#metascore').empty();
 		$('#finalIMDB').empty();
-		$('#finalReview').empty();
 		var releaseFrom = $('#releaseFrom').val();
 		var releaseTo = $('#releaseTo').val();
 		var runtimeFrom = $('#runtimeFrom').val();
@@ -140,31 +139,6 @@
 							if(omdbResponse.Poster !== "N/A"){
 								$('#poster').append('<img src="' + omdbResponse.Poster + '">');
 							}
-							var nyTitle = "'" + omdbResponse.Title + "'" ;
-							var nyURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json";
-							nyURL += '?' + $.param({
-								'api-key' : "97a1cd47ba1f46f8945916d276efeb15",
-								'query' : nyTitle
-							});
-							$.ajax({
-								url: nyURL,
-								type: "GET",
-								dataType: "JSON",
-								success: function(nyResponse){
-									if(nyResponse.results.length > 0){
-										$('#finalReview').append('<div id="reviewHeadline">' + nyResponse.results[0].headline + '</div>');
-										$('#finalReview').append('<div id="reviewSummary">' + nyResponse.results[0].summary_short + '</div>');
-										$('#finalReview').append('<div><a href="' + nyResponse.results[0].link.url + '">Full review</a></div>');
-										$('#finalReview').removeAttr('hidden');
-									}
-									else{
-										$('#finalReview').attr('disabled');
-									}
-								},
-								error: function(jqXHR, textStatus, errorThrown){
-		    						alert(errorThrown);
-		    					}
-							});
 						},
 		    			error: function(jqXHR, textStatus, errorThrown){
 		    				alert(errorThrown);

@@ -81,5 +81,9 @@ body {
 
 .indented {
   margin-left: 25px;
-  font-size: 18px
+  font-size: 18px;
+}
+
+.projects-list{
+  font-size: 18px;
 }

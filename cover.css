@@ -74,3 +74,7 @@ body {
 .projects-list{
   font-size: 18px;
 }
+
+.noah-img{
+  border: 3px solid black;
+}

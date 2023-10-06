@@ -26,7 +26,7 @@ body {
   color: rgba(255, 255, 255, .5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
-  margin-bottom: 100px;
+  margin-bottom: 100px !important;
 }
 
 .nav-masthead .nav-link:hover,

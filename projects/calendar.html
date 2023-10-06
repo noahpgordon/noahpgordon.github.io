@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Rutgers University - Calendar</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-static-top" id="blackNav">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">+Noah</a></li>
+                    <li><a href="#">Search</a></li> 
+                    <li><a href="#">Images</a></li>
+                    <li><a href="#">Mail</a></li>
+                    <li><a href="#">Drive</a></li>
+                    <li class="active"><a href="#">Calendar</a></li>
+                    <li><a href="#">Sites</a></li>
+                    <li><a href="#">Groups</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="navbar navbar-default" id="searchNav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Rutgers" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Rutgers_University_with_the_state_university_logo.svg/200px-Rutgers_University_with_the_state_university_logo.svg.png">
+                    </a>
+                </div>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search Calendar" id="searchCal">
+                    </div>
+                    <button type="button" class="btn btn-default btn-primary">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </form>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><p class="navbar-text">npg21@scarletmail.rutgers.edu</p></li>
+                        <li><span class="glyphicon glyphicon-bell" aria-hidden="true" id="Bell"></span></li>
+                        <li><button type="button" class="btn btn-default" id="shareButton"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Share</button></li>
+                        <li>
+                            <div class="dropdown" id="userDrop">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row" id="Settings">
+                <div class="col-xs-1">
+                    <div><p class="redCal">Calendar</p></div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div><button type="button" class="btn btn-default" disabled="disabled">Today</button></div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
+                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
+                            </div>
+                        </div>
+                        <div class="col-xs-5">
+                            <div><p class="dateText">Oct 2-Oct 8, 2016</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-xs-offset-2">
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default">Day</button>
+                        <button type="button" class="btn btn-default">Week</button>
+                        <button type="button" class="btn btn-default">Month</button>
+                        <button type="button" class="btn btn-default">4 Weeks</button>
+                        <button type="button" class="btn btn-default">Agenda</button>
+                    </div>
+                </div>
+                <div class="col-xs-1">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Print</a></li>
+                            <li><a href="#">Refresh</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-1">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span><span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><p class="Density">Display Density:</p></li>
+                            <li><a href="#">Comfortable</a></li>
+                            <li><a href="#">Cozy</a></li>
+                            <li><a href="#">Impact</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Labs</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Offline</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Send Feedback</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row" id="Dates">
+                <div class="col-xs-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger">Create</button>
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>
+                        <ul class="dropdown-menu">
+                            <li><p class="quickAdd">Quick Add</p></li>
+                            <li>
+                                <form class="form-inline">
+                                    <div class="form-group" id="createForm">
+                                        <input type="text" class="form-control" id="addEvent" placeholder="">
+                                        <button type="submit" class="btn btn-default">Add</button>
+                                    </div>
+                                </form>
+                            </li>
+                            <li><p class="help-block">Example: Dinner with Michael 7pm tomorrow</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 text-center">Sun 10/2</div>
+                                <div class="col-xs-3 text-center">Mon 10/3</div>
+                                <div class="col-xs-3 text-center">Tue 10/4</div>
+                                <div class="col-xs-3 text-center">Wed 10/5</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 text-center">Thu 10/6</div>
+                                <div class="col-xs-3 text-center">Fri 10/7</div>
+                                <div class="col-xs-3 text-center">Sat 10/8</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3"><p class="GMT">GMT-05</p></div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered text-right">12am-8am</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 text-right" id="EightAM">8am</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3" id="EightBottom">&nbsp</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered text-right" id="NineAM">9am</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered" id="NineBottom">&nbsp</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered text-right" id="TenAM">10am</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered" id="TenBottom">&nbsp</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered text-right" id="ElevenAM">11am</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered" id="ElevenBottom">&nbsp</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered text-right" id="TwelvePM">12pm</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered" id="TwelveBottom">&nbsp</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered text-right" id="OnePM">1pm</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered" id="OneBottom">&nbsp</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered text-right" id="TwoPM">2pm</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered" id="TwoBottom">&nbsp</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered text-right" id="ThreePM">3pm</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered" id="ThreeBottom">&nbsp</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered text-right" id="FourPM">4pm</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered" id="FourBottom">&nbsp</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3 table-bordered">&nbsp</div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="bottomRow">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="row">
+                        <div class="col-xs-9"></div>
+                        <div class="col-xs-3 table-bordered text-right">5pm-12am</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                                <div class="col-xs-3 table-bordered"><p class="whiteSpace"></p></div>
+                                <div class="col-xs-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

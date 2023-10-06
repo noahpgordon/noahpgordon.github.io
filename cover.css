@@ -26,6 +26,7 @@ body {
   color: rgba(255, 255, 255, .5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
+  margin-bottom: 100px;
 }
 
 .nav-masthead .nav-link:hover,
@@ -73,8 +74,4 @@ body {
 
 .projects-list{
   font-size: 18px;
-}
-
-#noah-header{
-  margin-bottom: 100px;
 }

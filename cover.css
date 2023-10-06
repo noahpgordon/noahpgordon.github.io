@@ -1,9 +1,4 @@
 /*
- * Globals
- */
-
-
-/*
  * Base structure
  */
 
@@ -13,6 +8,7 @@ body {
   background-color: rgba(72, 124, 167, 1);
   margin: 0px;
   padding: 0px;
+  min-height: 100dvh;
 }
 
 .cover-container {

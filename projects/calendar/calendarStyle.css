@@ -1,0 +1,138 @@
+#blackNav{
+    margin-bottom:0px;
+}
+#searchNav{
+    margin-top:0px; 
+    margin-bottom:10px;
+}
+img{
+    width:160px; 
+    height:56px; 
+    margin-top:-15px;
+}
+.help-block{
+    font-size:small;
+    margin-left:15px;
+}
+.GMT{
+    font-size:x-small;
+}
+.whiteSpace{
+    height: 30px;
+}
+.redCal{
+    color:#cc0000; 
+    font-size:x-large;
+}
+.dateText{
+    font-size:small; padding-top:10px;
+}
+.Density{
+    padding-left:5px;
+}
+.quickAdd{
+    margin-left:15px;
+}
+#createForm{
+    width:450px;
+}
+#addEvent{
+    width:350px; 
+    margin-left:15px;
+}
+#searchCal{
+    width:600px;
+}
+#Bell{
+    margin-top:18px; 
+    margin-right:15px; 
+    padding-bottom:30px;
+}
+#shareButton{
+    margin-top:10px; 
+    margin-right:10px;
+}
+#userDrop{
+    margin-top:10px;
+}
+#bottomRow{
+    margin-bottom: 10px;
+}
+#Settings{
+    border-bottom:1px solid #E8E8E8;
+}
+#Dates{
+    margin-top:8px;
+}
+#EightAM{
+    border:2px solid #E8E8E8;
+    border-bottom: 0px;
+}
+#EightBottom{
+    border:2px solid #E8E8E8;
+    border-top: 0px;
+}
+#NineAM{
+    border:2px solid #E8E8E8;
+    border-bottom: 0px;
+}
+#TenAM{
+    border:2px solid #E8E8E8;
+    border-bottom: 0px;
+}
+#ElevenAM{
+    border:2px solid #E8E8E8;
+    border-bottom: 0px;
+}
+#TwelvePM{
+    border:2px solid #E8E8E8;
+    border-bottom: 0px;
+}
+#OnePM{
+    border:2px solid #E8E8E8;
+    border-bottom: 0px;
+}
+#TwoPM{
+    border:2px solid #E8E8E8;
+    border-bottom: 0px;
+}
+#ThreePM{
+    border:2px solid #E8E8E8;
+    border-bottom: 0px;
+}
+#FourPM{
+    border:2px solid #E8E8E8;
+    border-bottom: 0px;
+}
+#NineBottom{
+    border:2px solid #E8E8E8;
+    border-top: 0px;
+}
+#TenBottom{
+    border:2px solid #E8E8E8;
+    border-top: 0px;
+}
+#ElevenBottom{
+    border:2px solid #E8E8E8;
+    border-top: 0px;
+}
+#TwelveBottom{
+    border:2px solid #E8E8E8;
+    border-top: 0px;
+}
+#OneBottom{
+    border:2px solid #E8E8E8;
+    border-top: 0px;
+}
+#TwoBottom{
+    border:2px solid #E8E8E8;
+    border-top: 0px;
+}
+#ThreeBottom{
+    border:2px solid #E8E8E8;
+    border-top: 0px;
+}
+#FourBottom{
+    border:2px solid #E8E8E8;
+    border-top: 0px;
+}

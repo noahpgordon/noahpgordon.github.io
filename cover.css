@@ -56,13 +56,13 @@ body {
 }
 
 .noah-link:hover {
-  color: rgba(235, 32, 59, 0.9);
+  color: rgba(255, 131, 202, 0.9);
   background-color: transparent;
   text-decoration: underline;
 }
 
 .noah-link:active {
-  color: rgba(235, 32, 59, 0.9);
+  color: rgba(255, 131, 202, 0.9);
   background-color: transparent;
   text-decoration: underline;
 }

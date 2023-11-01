@@ -19,6 +19,11 @@ body {
 /*
  * Header
  */
+.noah-nav {
+  margin-bottom: 50px !important;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+}
 
 .nav-masthead .nav-link {
   padding: .25rem 0;
@@ -29,16 +34,12 @@ body {
   margin-bottom: 100px !important;
 }
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
+.noah-nav .nav-link:hover,
+.noah-nav .nav-link:focus {
   border-bottom-color: rgba(255, 255, 255, .25);
 }
 
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
+.noah-nav .active {
   color: #fff;
   border-bottom-color: #fff;
 }

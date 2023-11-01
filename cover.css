@@ -20,10 +20,10 @@ body {
  * Header
  */
 .noah-nav {
-  margin-bottom: 75px !important;
+  margin-bottom: 100px !important;
   font-weight: 700;
   --bs-nav-link-color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
-  --bs-nav-link-hover-color: black!important;
+  --bs-nav-link-hover-color: rgba(255, 131, 202, 0.9)!important;
 }
 
 .noah-nav .nav-item:hover,

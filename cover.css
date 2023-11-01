@@ -22,7 +22,7 @@ body {
 .noah-nav {
   margin-bottom: 75px !important;
   font-weight: 700;
-  color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
+  bs-nav-link-color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
 }
 
 .noah-nav .nav-item:hover,

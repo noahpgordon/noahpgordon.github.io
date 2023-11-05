@@ -78,3 +78,7 @@ body {
 .square{
   list-style-type: square;
 }
+
+.bigPic {
+  max-width: 75%;
+}

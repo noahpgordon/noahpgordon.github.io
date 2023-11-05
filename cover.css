@@ -15,7 +15,6 @@ body {
   max-width: 42em;
 }
 
-
 /*
  * Header
  */
@@ -68,11 +67,7 @@ body {
   border: 1px solid black;
 }
 
-.indented {
-  font-size: 18px;
-}
-
-.projects-list{
+.eighteen{
   font-size: 18px;
 }
 

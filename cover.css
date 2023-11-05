@@ -73,12 +73,9 @@ body {
 
 .noah-img{
   border: 3px solid black;
+  max-width: 75%;
 }
 
 .square{
   list-style-type: square;
-}
-
-.bigPic {
-  max-width: 75%;
 }

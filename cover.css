@@ -11,6 +11,15 @@ body {
   min-height: 100dvh;
 }
 
+table {
+  border: 1px solid black;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
 .cover-container {
   max-width: 42em;
 }

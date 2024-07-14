@@ -1,7 +1,7 @@
 ﻿$(document).ready(function(){
-	var releasePattern1 = /^18[7-9][0-9]$/;
-	var releasePattern2 = /^19[0-9][0-9]$/;
-	var releasePattern3 = /^20[0-9][0-9]$/;
+	var releasePattern1 = /^18[7-9][0-9]-[0-1][0-9]-[0-3][0-9]$/;
+	var releasePattern2 = /^19[0-9][0-9]-[0-1][0-9]-[0-3][0-9]$/;
+	var releasePattern3 = /^20[0-9][0-9]-[0-1][0-9]-[0-3][0-9]$/;
 	var runTimePattern = /^[0-9]{1,5}$/;
 	var emptyPattern = /^$/;
 	$('#preferences').submit(function(e){
@@ -28,13 +28,13 @@
 		var releasesWritten = false;
 		var runtimesWritten = false;
 		if((releasePattern1.test(releaseFrom) == false) && (releasePattern2.test(releaseFrom) == false) && (releasePattern3.test(releaseFrom) == false) && (emptyPattern.test(releaseFrom) == false)){
-			$('#releases1').append("Any release date must be a 4 digit year between 1870 and 2099.");
+			$('#releases1').append("Release date must be in the following format: YYYY-MM-DD.");
 			isError = true;
 		}
 		if((releasePattern1.test(releaseTo) == false) && (releasePattern2.test(releaseTo) == false) && (releasePattern3.test(releaseTo) == false) && (emptyPattern.test(releaseTo) == false)){
-			$('#releases2').append("<div>Any release date must be a 4 digit year between 1870 and 2099.</div>");
+			$('#releases2').append("<div>Release date must be in the following format: YYYY-MM-DD</div>");
 			isError = true;
-			relasesWritten = true;
+			releasesWritten = true;
 		}
 		if((parseInt(releaseFrom) > parseInt(releaseTo)) && (emptyPattern.test(releaseTo) == false)){
 			if(releasesWritten == false){

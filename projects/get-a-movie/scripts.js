@@ -28,11 +28,11 @@
 		var releasesWritten = false;
 		var runtimesWritten = false;
 		if((releasePattern1.test(releaseFrom) == false) && (releasePattern2.test(releaseFrom) == false) && (releasePattern3.test(releaseFrom) == false) && (emptyPattern.test(releaseFrom) == false)){
-			$('#releases1').append("Release date must be in the following format: YYYY-MM-DD.");
+			$('#releases1').append("Release date must be a valid date in the following format: YYYY-MM-DD.");
 			isError = true;
 		}
 		if((releasePattern1.test(releaseTo) == false) && (releasePattern2.test(releaseTo) == false) && (releasePattern3.test(releaseTo) == false) && (emptyPattern.test(releaseTo) == false)){
-			$('#releases2').append("<div>Release date must be in the following format: YYYY-MM-DD</div>");
+			$('#releases2').append("<div>Release date must be a valid date in the following format: YYYY-MM-DD</div>");
 			isError = true;
 			releasesWritten = true;
 		}
